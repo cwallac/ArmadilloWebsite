@@ -1,0 +1,36 @@
+var path = require('path'),
+	express = require('express'),
+	app = express(),
+	
+	url = require('url');
+
+
+
+//Renders homepage
+app.get('/', function(req, res) {
+  res.sendfile(__dirname + '/Public/index.html');
+});
+
+app.get('/team.html', function(req, res) {
+  res.sendfile(__dirname + './Public/team.html');
+});
+
+app.get('/product.html', function(req, res) {
+  res.sendfile(__dirname + './Public/product.html');
+});
+
+app.get('/feedback.html', function(req, res) {
+  res.sendfile(__dirname + './Public/feedback.html');
+});
+
+
+
+
+
+
+
+
+app.listen(3000);
+
+
+
